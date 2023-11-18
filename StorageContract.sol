@@ -4,14 +4,14 @@ pragma solidity ^0.8.0;
 
 contract storageContract {
     uint[5] private numbers;
-    uint private count;
+    uint private count = 0;
 
     function addNumber(uint _number) public {
         if (count >= 5) {
             count = 0;
             numbers[count] = _number;
             count++;
-        } else if (count < 5) {
+        } else {
             numbers[count] = _number;
             count++;
             }
